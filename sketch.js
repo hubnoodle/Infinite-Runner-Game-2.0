@@ -13,6 +13,9 @@ var gameOver, restart;
 
 
 function preload(){
+
+  backgroundImg = loadImage("backgroundImg.png");
+
   run_running =   loadAnimation("run1.png","run2.png","run3.png","run4.png","run5.png","run6.png","run7.png","run8.png","run9.png","run10.png","run11.png");run_collided = loadAnimation("fall.png");
   
   groundImage = loadImage("ground2.png");
@@ -58,7 +61,8 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+
+  background(backgroundImg);
   
   text("Score: "+ score, 400,50);
   
